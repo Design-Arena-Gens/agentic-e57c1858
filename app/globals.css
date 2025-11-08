@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  min-height: 100vh;
+}
+
+.ebook-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 40px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  margin-bottom: 40px;
+}
+
+.cover h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  line-height: 1.2;
+}
+
+.cover .subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.cover .author {
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+.navigation {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 0;
+  position: sticky;
+  top: 10px;
+  background: rgba(255,255,255,0.95);
+  padding: 15px;
+  border-radius: 50px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.nav-btn.active {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.chapter {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chapter h2 {
+  color: #764ba2;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 15px;
+}
+
+.chapter h3 {
+  color: #667eea;
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.chapter h4 {
+  color: #764ba2;
+  font-size: 1.4rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.chapter p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.chapter ul, .chapter ol {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.chapter li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.tour-guide-box {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border-left: 5px solid #f5576c;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 10px;
+  font-style: italic;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tour-guide-box::before {
+  content: "🎭 Your Tour Guide Says:";
+  display: block;
+  font-weight: bold;
+  font-style: normal;
+  color: #f5576c;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.tip-box {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  border-left: 5px solid #667eea;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tip-box::before {
+  content: "💡 Holistic Tip:";
+  display: block;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.recipe-box {
+  background: #f0f9ff;
+  border: 2px solid #667eea;
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.recipe-box h4 {
+  color: #667eea;
+  margin-top: 0;
+}
+
+.progress-indicator {
+  text-align: center;
+  color: #764ba2;
+  font-weight: bold;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .cover h1 {
+    font-size: 2rem;
+  }
+
+  .cover .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .chapter {
+    padding: 30px 20px;
+  }
+
+  .chapter h2 {
+    font-size: 2rem;
+  }
+
+  .navigation {
+    flex-direction: column;
+    border-radius: 15px;
+  }
+
+  .nav-btn {
+    width: 100%;
+  }
+}
